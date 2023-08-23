@@ -1,0 +1,20 @@
+The code you provided is a Python Flask application that performs OCR on prescription images. The application uses the following libraries:
+
+# os: This library provides functions for interacting with the operating system.
+pytesseract: This library is used to perform optical character recognition (OCR) on images.
+
+#PIL: This library is used to work with images in Python.
+
+#flask: This library is used to create web applications in Python.
+The application works as follows:
+
+The user uploads a prescription image to the application.
+The application uses the pytesseract library to perform OCR on the image.
+The text of the prescription is extracted from the image and returned to the user.
+The application is also able to display the text of the prescription on a web page.
+
+Here are some additional things you can study about the code:
+
+The ocr_prescription() function is used to perform OCR on the prescription image. This function takes the path to the image as input and returns the text of the prescription as plaintext.
+The index.html template is used to display the text of the prescription on a web page. This template takes the text of the prescription as input and renders it in a web page.
+The app.run() function is used to run the Flask application. This function takes the debug=True argument, which means that the application will be run in debug mode.

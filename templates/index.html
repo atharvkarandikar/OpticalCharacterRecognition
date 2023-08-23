@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OCR Prescription</title>
+    <style>
+    body {
+      background-image: url("img1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+
+    form {
+      text-align: center;
+      margin: 0 auto;
+      width: 400px;
+    }
+
+    input {
+      margin: 0 10px;
+    }
+
+    p {
+      margin: 0 10px;
+    }
+
+    .prescription {
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    .plaintext-response {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    img {
+      width: 100px;
+      margin: 0 10px;
+    }
+
+    .hover:hover {
+      background-color: #ddd;
+    }
+    h1 {
+        text-align: center;
+    }
+    </style>
+
+</head>
+<body>
+  <h1 class="hover">OCR Prescription</h1>
+  <form action="/ocr" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" class="prescription">
+    <input type="submit" value="Submit" class="prescription hover">
+  </form>
+  {% if text %}
+    <p>The text of the prescription is:</p>
+    <p class="plaintext-response">{{ text | safe }}</p>
+  {% endif %}
+</body>
+</html>
